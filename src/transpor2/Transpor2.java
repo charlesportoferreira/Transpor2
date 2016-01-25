@@ -44,9 +44,6 @@ public class Transpor2 {
         try (FileReader fr = new FileReader(oldFile); BufferedReader br = new BufferedReader(fr)) {
             while (br.ready()) {
                 linha = br.readLine();
-//                if (!linha.contains("@data")) {
-//                    continue;
-//                }
                 linha = linha.replaceAll("\".*\",|", "");
                 linha = linha.substring(0, linha.lastIndexOf(","));
                 salvaLinhaDados(newFile, linha);
